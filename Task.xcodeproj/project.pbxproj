@@ -65,6 +65,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE2CDE9F27BF5369003669A0 /* Prefences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Prefences;
+			sourceTree = "<group>";
+		};
 		BE6A722B27BE181300F10CA5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +119,7 @@
 		BEDD941227BE04F300356E1F /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				BE2CDE9F27BF5369003669A0 /* Prefences */,
 				BEDD942A27BE052000356E1F /* Application */,
 				BEDD942C27BE055A00356E1F /* Scenes */,
 				BE6A722B27BE181300F10CA5 /* Models */,
