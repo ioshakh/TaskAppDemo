@@ -36,17 +36,17 @@ extension HomeVC {
     
     private func setLabelsConstraints() {
         cityLabel.snp.makeConstraints { make in
-            make.top.equalTo(searchField.snp.bottom).offset(50)
+            make.top.equalTo(searchField.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.6)
-            make.height.equalTo(50)
+            make.height.equalToSuperview().multipliedBy(0.06)
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(cityLabel.snp.bottom).offset(10)
+            make.top.equalTo(cityLabel.snp.bottom).offset(5)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.5)
-            make.height.equalTo(40)
+            make.height.equalToSuperview().multipliedBy(0.03)
         }
         
       
@@ -60,7 +60,7 @@ extension HomeVC {
     
     private func weatherImageIconConstraints() {
         weatherIcon.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom).offset(30)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(5)
             make.centerX.equalToSuperview()
             make.width.height.equalTo(180)
         }
@@ -68,20 +68,19 @@ extension HomeVC {
     
     private func contentViewConfigure() {
         contentView.snp.makeConstraints { make in
-            make.top.equalTo(weatherIcon.snp.bottom).offset(30)
+            make.top.equalTo(weatherIcon.snp.bottom).offset(5)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.9)
-            make.height.equalTo(40)
-            
+            make.height.equalToSuperview().multipliedBy(0.06)
         }
     }
     
     private func infoWindViewConfigure() {
         windViewInfo.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.bottom).offset(20)
+            make.top.equalTo(contentView.snp.bottom).offset(5)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.8)
-            make.height.equalTo(30)
+            make.height.equalToSuperview().multipliedBy(0.04)
             
         }
     }

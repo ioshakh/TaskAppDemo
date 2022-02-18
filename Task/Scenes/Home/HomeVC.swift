@@ -185,7 +185,7 @@ extension HomeVC: UITextFieldDelegate {
 //    }
 
 
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    internal func textFieldDidEndEditing(_ textField: UITextField) {
         let city = searchField.text
         if city != "" {
             weatherManager.fetchWeather(cityName: city!)
@@ -194,7 +194,7 @@ extension HomeVC: UITextFieldDelegate {
         }
         searchField.text = ""
     }
-
+    
 }
 
 
@@ -213,4 +213,9 @@ extension HomeVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
+}
+
+
+extension HomeVC {
+    
 }
