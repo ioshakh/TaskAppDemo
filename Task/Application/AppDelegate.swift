@@ -15,13 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setViewConfigure()
-       
-       
+        
+           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.systemBlue], for: .normal)
+           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
         return true
     }
     
     private func setViewConfigure() {
-        let vc = HomeVC()
+        let vc = DetailView()
         let nv = UINavigationController(rootViewController:vc)
         self.window = UIWindow(frame:UIScreen.main.bounds)
         self.window?.rootViewController = nv
