@@ -8,6 +8,15 @@ is working with Xcode Version Xcode 13.1 (9B55). If you are using different Xcod
 
 This is application shows your local city weather
 
+MVVM + MVC - Reactively update ViewController UI from ViewModel
+Value-based programming - Use immutable value anywhere.
+Icon fonts － Use Weather Icons
+SwiftyJSON
+Core Location
+App indexing like CoreSpotlight and NSUserActivity
+UI SnapKit
+Animations
+
 ScreenShots
 
 ![simulator_screenshot_BCAD8D15-1B72-47C0-AA24-4C6CA0B353C1](https://user-images.githubusercontent.com/79221577/154563754-8e4cdc6b-d0e0-4a44-9d45-b2e2d3e7d52a.png)
