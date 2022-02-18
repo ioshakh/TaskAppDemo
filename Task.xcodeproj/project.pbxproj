@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2CDEA127BF539D003669A0 /* GeneralPrefenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2CDEA027BF539D003669A0 /* GeneralPrefenses.swift */; };
+		BE2CDEA327BF53C1003669A0 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2CDEA227BF53C1003669A0 /* String + Extensions.swift */; };
+		BE2CDEA527BF53DF003669A0 /* languageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2CDEA427BF53DF003669A0 /* languageModel.swift */; };
 		BEA8FB9D27BEBDBB002AD0C8 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA8FB9C27BEBDBB002AD0C8 /* GifImage.swift */; };
 		BEA8FBA327BEC27F002AD0C8 /* 023abf6fac6adaa2b9778c532f800f52.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA8FBA227BEC27F002AD0C8 /* 023abf6fac6adaa2b9778c532f800f52.gif */; };
 		BED3416A27BE37FB005EADE3 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3416927BE37FB005EADE3 /* WeatherModel.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE2CDEA027BF539D003669A0 /* GeneralPrefenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPrefenses.swift; sourceTree = "<group>"; };
+		BE2CDEA227BF53C1003669A0 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		BE2CDEA427BF53DF003669A0 /* languageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = languageModel.swift; sourceTree = "<group>"; };
 		BEA8FB9C27BEBDBB002AD0C8 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		BEA8FBA227BEC27F002AD0C8 /* 023abf6fac6adaa2b9778c532f800f52.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 023abf6fac6adaa2b9778c532f800f52.gif; sourceTree = "<group>"; };
 		BED3416927BE37FB005EADE3 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 		BE2CDE9F27BF5369003669A0 /* Prefences */ = {
 			isa = PBXGroup;
 			children = (
+				BE2CDEA027BF539D003669A0 /* GeneralPrefenses.swift */,
 			);
 			path = Prefences;
 			sourceTree = "<group>";
@@ -78,6 +85,7 @@
 				BED3416927BE37FB005EADE3 /* WeatherModel.swift */,
 				BED3416B27BE385B005EADE3 /* WeatherData.swift */,
 				BED3416D27BE388F005EADE3 /* WeatherManager.swift */,
+				BE2CDEA427BF53DF003669A0 /* languageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,8 +127,8 @@
 		BEDD941227BE04F300356E1F /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				BE2CDE9F27BF5369003669A0 /* Prefences */,
 				BEDD942A27BE052000356E1F /* Application */,
+				BE2CDE9F27BF5369003669A0 /* Prefences */,
 				BEDD942C27BE055A00356E1F /* Scenes */,
 				BE6A722B27BE181300F10CA5 /* Models */,
 				BEDD943B27BE0BA700356E1F /* Views */,
@@ -182,6 +190,7 @@
 				BEDD943427BE08D300356E1F /* UIColor + Extensions.swift */,
 				BEDD943627BE090F00356E1F /* ViewController + Extensions.swift */,
 				BED3417327BE7E32005EADE3 /* View + Extensions.swift */,
+				BE2CDEA227BF53C1003669A0 /* String + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,12 +300,15 @@
 				BEDD941E27BE04F300356E1F /* Task.xcdatamodeld in Sources */,
 				BED3416A27BE37FB005EADE3 /* WeatherModel.swift in Sources */,
 				BEDD941427BE04F300356E1F /* AppDelegate.swift in Sources */,
+				BE2CDEA527BF53DF003669A0 /* languageModel.swift in Sources */,
+				BE2CDEA327BF53C1003669A0 /* String + Extensions.swift in Sources */,
 				BED3416E27BE388F005EADE3 /* WeatherManager.swift in Sources */,
 				BED3416C27BE385B005EADE3 /* WeatherData.swift in Sources */,
 				BED3417027BE7C3C005EADE3 /* HomeVC + AutoLayout.swift in Sources */,
 				BEDD943127BE080A00356E1F /* BaseVC.swift in Sources */,
 				BED3417227BE7DE2005EADE3 /* infoCardView.swift in Sources */,
 				BED3417C27BE9D0D005EADE3 /* infoWindView + AutoLayout.swift in Sources */,
+				BE2CDEA127BF539D003669A0 /* GeneralPrefenses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
