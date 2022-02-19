@@ -36,8 +36,8 @@ class DetailModelItems: DetailModelPresentable {
 class ViewModel {
     init() {
         let firstStep = DetailModelItems(detailImage:UIImage(systemName:"wind")! , detailLable:"wind", detailinfo:"SE 6MPH")
-        let secondStep = DetailModelItems(detailImage:UIImage(systemName:"thermometer.sun")! , detailLable:"Humidity", detailinfo:"55%")
-        let thirdStep = DetailModelItems(detailImage:UIImage(systemName:"cloud.rain")! , detailLable:"DEW POINT", detailinfo:"50")
+        let secondStep = DetailModelItems(detailImage:UIImage(systemName:"thermometer.sun")! , detailLable:"Humidity", detailinfo:"35%")
+        let thirdStep = DetailModelItems(detailImage:UIImage(systemName:"cloud.rain")! , detailLable:"DEW POINT", detailinfo:"40")
         let fourthStep = DetailModelItems(detailImage:UIImage(systemName:"thermometer.sun")! , detailLable:"PRESSURE", detailinfo:"30.01 ln")
         let fifthStep = DetailModelItems(detailImage:UIImage(systemName:"eye")! , detailLable:"VISIBILTY", detailinfo:"10.0 Mi")
         

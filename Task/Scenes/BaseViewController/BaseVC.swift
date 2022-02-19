@@ -27,6 +27,8 @@ class BaseViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
+    
+   
 }
 
 extension BaseViewController {

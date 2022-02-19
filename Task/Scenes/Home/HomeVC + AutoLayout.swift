@@ -51,7 +51,7 @@ extension HomeVC {
         
       
         searchField.snp.makeConstraints { make in
-            make.top.equalTo(50)
+            make.top.equalTo(view.safeAreaLayoutGuide)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.7)
             make.height.equalTo(50)
@@ -93,3 +93,5 @@ extension HomeVC {
         }
     }
 }
+
+

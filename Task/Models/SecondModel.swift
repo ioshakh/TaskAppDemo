@@ -26,17 +26,17 @@ class SecodModel:SecondModelPresentable {
 
 class SecondViewModel {
     init() {
-        let first = SecodModel(secondLabel:"40º", secondInfo:"Now")
-        let second = SecodModel(secondLabel:"30º", secondInfo:"12pm")
-        let third = SecodModel(secondLabel:"30º", secondInfo:"1pm")
-        let fourth = SecodModel(secondLabel:"50º", secondInfo:"2pm")
-        let fifth = SecodModel(secondLabel:"25º", secondInfo:"3pm")
-        let sixth = SecodModel(secondLabel:"35º", secondInfo:"4pm")
-        let seventh = SecodModel(secondLabel:"45º", secondInfo:"5pm")
-        let eights = SecodModel(secondLabel:"53º", secondInfo:"6pm")
-        let ninth = SecodModel(secondLabel:"29º", secondInfo:"7pm")
-        let tenth = SecodModel(secondLabel:"30º", secondInfo:"8pm")
-        let eleventh = SecodModel(secondLabel:"19º", secondInfo:"9pm")
+        let first = SecodModel(secondLabel:"20º", secondInfo:"Now")
+        let second = SecodModel(secondLabel:"25º", secondInfo:"12pm")
+        let third = SecodModel(secondLabel:"31º", secondInfo:"1pm")
+        let fourth = SecodModel(secondLabel:"25º", secondInfo:"2pm")
+        let fifth = SecodModel(secondLabel:"23º", secondInfo:"3pm")
+        let sixth = SecodModel(secondLabel:"22º", secondInfo:"4pm")
+        let seventh = SecodModel(secondLabel:"18º", secondInfo:"5pm")
+        let eights = SecodModel(secondLabel:"16º", secondInfo:"6pm")
+        let ninth = SecodModel(secondLabel:"15º", secondInfo:"7pm")
+        let tenth = SecodModel(secondLabel:"5º", secondInfo:"8pm")
+        let eleventh = SecodModel(secondLabel:"3º", secondInfo:"9pm")
         
         secondItem.append(contentsOf:[first,second,third,fourth,fifth,sixth,seventh,eights,ninth,tenth,eleventh])
     }

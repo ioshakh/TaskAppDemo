@@ -193,3 +193,4 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
 }
 
 
+

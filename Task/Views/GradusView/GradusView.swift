@@ -29,7 +29,7 @@ class ViewMain:UIView {
     
     private(set) lazy var numLabel: UILabel = {
        let view = UILabel()
-        view.text = "45°f"
+        view.text = "23°C"
         view.textColor = .blue
         view.textAlignment = .center
         view.font = UIFont.boldSystemFont(ofSize:48)
@@ -56,7 +56,7 @@ class ViewMain:UIView {
     
     private(set) lazy var secondnumLabel: UILabel = {
        let view = UILabel()
-        view.text = "68°f"
+        view.text = "15°C"
         view.textColor = .systemBlue
         view.textAlignment = .center
         view.font = UIFont.boldSystemFont(ofSize:48)

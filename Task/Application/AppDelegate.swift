@@ -22,10 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setViewConfigure() {
-        let vc = DetailView()
-        let nv = UINavigationController(rootViewController:vc)
-        self.window = UIWindow(frame:UIScreen.main.bounds)
-        self.window?.rootViewController = nv
+        
+        if CheckInternet.Connection() == true {
+            let vc = HomeVC()
+            let nv = UINavigationController(rootViewController:vc)
+            self.window = UIWindow(frame:UIScreen.main.bounds)
+            self.window?.rootViewController = nv
+        }else{
+            let vc = offlineVC()
+            let nv = UINavigationController(rootViewController:vc)
+            self.window = UIWindow(frame:UIScreen.main.bounds)
+            self.window?.rootViewController = nv
+        }
+        
         self.window?.makeKeyAndVisible()
         UINavigationBar.appearance().tintColor = .white
     }

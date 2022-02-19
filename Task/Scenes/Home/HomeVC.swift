@@ -61,7 +61,7 @@ class HomeVC:BaseViewController {
         view.returnKeyType = UIReturnKeyType.done
         return view
     }()
-    
+   
     var weatherManager = WeatherManager()
     var locationManager = CLLocationManager()
     
@@ -71,9 +71,8 @@ class HomeVC:BaseViewController {
         setEmbedViewsDelegate()
         navViewConfigure()
         locationManager.requestLocation()
+
       }
-    
-    
     
     private func setEmbedViewsDelegate() {
          searchField.delegate = self
@@ -93,17 +92,24 @@ class HomeVC:BaseViewController {
     
     
     private func navViewConfigure() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh , target: self, action: #selector(addTapped))
+        let share = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(shareTapped))
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        navigationItem.leftBarButtonItems = [add, share]
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(addTappeds))
         navigationController?.navigationBar.barTintColor = UIColor.green
     }
     
     // Functions
     
-    @objc func addTapped() {
+    @objc func shareTapped() {
         locationManager.requestLocation()
         activity.isHidden = false
         activity.startAnimating()
+    }
+    
+    
+    @objc func addTapped() {
+        navigationController?.pushViewController(DetailView(), animated:true)
     }
     
     @objc func addTappeds() {
