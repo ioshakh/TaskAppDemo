@@ -84,7 +84,7 @@ extension FirstCell {
         firstCellView.addSubview(firstCellInfo)
         firstCellInfo.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(5)
-            make.right.equalTo(-5)
+            make.right.equalTo(-10)
             make.width.equalTo(100)
         }
     }

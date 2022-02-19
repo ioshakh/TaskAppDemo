@@ -33,7 +33,7 @@ class detailView:UIView {
     
     private(set) lazy var gradusLabel:UILabel = {
        let label = UILabel()
-       label.text = "60"
+       label.text = "45º"
        label.font = UIFont.boldSystemFont(ofSize:40)
        return label
     }()
@@ -57,14 +57,17 @@ class detailView:UIView {
     
     private(set) lazy var PinImageView:UIImageView = {
         let img = UIImageView()
-        img.backgroundColor = .red
+        img.image = UIImage(systemName:"sun.min.fill")
+        img.contentMode = .scaleAspectFit
+        img.tintColor = UIColor.orange
         return img
     }()
     
     private(set) lazy var plusButton:UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 17.5
-        button.backgroundColor = .blue
+        button.setImage(UIImage(systemName:"plus"), for:.normal)
+        button.backgroundColor = .lightGray
         return button
     }()
     

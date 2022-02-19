@@ -11,33 +11,42 @@ class thirdCell: UITableViewCell {
     
     private lazy var weekView:UIView = {
         let view = UIView()
-        view.backgroundColor = .gray
         return view
     }()
     
-    private lazy var weeklabel:UILabel = {
+    lazy var weeklabel:UILabel = {
         let label = UILabel()
-        label.backgroundColor = .black
+        label.font = UIFont.boldSystemFont(ofSize:15)
+        label.textAlignment = .left
         return label
     }()
     
-    private lazy var weekImage:UIImageView = {
+  lazy var weekImage:UIImageView = {
         let img = UIImageView()
-        img.backgroundColor = .green
+        img.contentMode = .scaleAspectFit
         return img
     }()
     
     private lazy var weekLow:UILabel = {
         let lbl = UILabel()
-        lbl.backgroundColor = .blue
+        lbl.textColor = .gray
+        lbl.font = UIFont.boldSystemFont(ofSize:15)
         return lbl
     }()
     
     private lazy var weekHigh:UILabel = {
         let lbl = UILabel()
-        lbl.backgroundColor = .red
+        lbl.font = UIFont.boldSystemFont(ofSize:15)
         return lbl
     }()
+    
+    
+    func threeConfigure(with threeViewModel:thirdModelPresentable) {
+        weeklabel.text = threeViewModel.thirdLabel
+        weekImage.image = threeViewModel.thirdImage
+        weekLow.text = threeViewModel.lowDegree
+        weekHigh.text = threeViewModel.highDegree
+    }
     
     
 
@@ -70,7 +79,7 @@ extension thirdCell {
         weekImage.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(10)
             make.left.equalTo(weeklabel.snp.right).offset(50)
-            make.width.equalTo(30)
+            make.width.equalTo(20)
         }
         
         

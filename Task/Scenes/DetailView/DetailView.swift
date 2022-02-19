@@ -11,6 +11,7 @@ class DetailView:UIViewController {
     
     var firstItems: ViewModel?
     var secondItems:  SecondViewModel?
+    var thirdItems: thirdViewModel?
     
     private(set) lazy var headerView:detailView = {
        let view = detailView()
@@ -63,6 +64,7 @@ class DetailView:UIViewController {
         setupSubviews()
         firstItems =  ViewModel()
         secondItems =   SecondViewModel()
+        thirdItems = thirdViewModel()
     }
 }
 
@@ -114,7 +116,7 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
            case 1:
                return (secondItems?.secondItem.count)!
            case 2:
-               return 5
+               return (thirdItems?.thirdItem.count)!
            default:
                return 0
            }
@@ -149,8 +151,39 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
                
                let cell = tableView.dequeueReusableCell(withIdentifier: "thirdCell", for: indexPath) as! thirdCell
                
+               let third = thirdItems?.thirdItem[indexPath.row]
                
-    
+                cell.threeConfigure(with: third!)
+               
+               if indexPath.row == 0 {
+                   cell.weeklabel.textColor = UIColor.systemBlue
+               }
+               
+               switch indexPath.row {
+                   case 0 :
+                   cell.weekImage.tintColor = UIColor.orange
+                   case 1 :
+                   cell.weekImage.tintColor = UIColor.gray
+                   case 2 :
+                   cell.weekImage.tintColor = UIColor.systemBlue
+                   case 3 :
+                   cell.weekImage.tintColor = UIColor.purple
+                   case 4 :
+                   cell.weekImage.tintColor = UIColor.blue
+                   case 5 :
+                   cell.weekImage.tintColor = UIColor.gray
+                   case 6 :
+                   cell.weekImage.tintColor = UIColor.blue
+                   case 7 :
+                   cell.weekImage.tintColor = UIColor.orange
+                   case 8 :
+                   cell.weekImage.tintColor = UIColor.blue
+                   case 10 :
+                   cell.weekImage.tintColor = UIColor.orange
+               default:
+                   return cell
+               }
+            
                 return cell
                
            default:
