@@ -9,6 +9,9 @@ import UIKit
 
 class DetailView:UIViewController {
     
+    var firstItems: ViewModel?
+    var secondItems:  SecondViewModel?
+    
     private(set) lazy var headerView:detailView = {
        let view = detailView()
        view.roundCorners(.allCorners, radius:20)
@@ -25,9 +28,6 @@ class DetailView:UIViewController {
     }()
     
     
-    
-    
-    
     let segmentControl:UISegmentedControl = {
         let view = UISegmentedControl(items:["Details", "Hourly", "10-Days"])
         view.backgroundColor = .white
@@ -40,22 +40,20 @@ class DetailView:UIViewController {
     }()
     
 
-    
     @objc  func handleTapped(sender:UISegmentedControl) {
-        
         self.tableView.reloadData()
     }
     
-    
-    
 
     private(set) lazy var tableView:UITableView = {
-       let view = UITableView()
+        let view = UITableView()
         view.delegate = self
         view.dataSource = self
+        view.separatorStyle = .none
         view.register(FirstCell.self , forCellReuseIdentifier:"firstCell")
         view.register(SecondCell.self , forCellReuseIdentifier:"secondCell")
-       return view
+        view.register(thirdCell.self, forCellReuseIdentifier:"thirdCell")
+        return view
     }()
     
     
@@ -63,6 +61,8 @@ class DetailView:UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
         setupSubviews()
+        firstItems =  ViewModel()
+        secondItems =   SecondViewModel()
     }
 }
 
@@ -75,7 +75,6 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
            {
            case 0:
             let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 60))
-               headerView.backgroundColor = .purple
                headerView.addSubview(main)
                main.snp.makeConstraints { make in
                    make.edges.equalToSuperview().inset(5)
@@ -89,6 +88,7 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
                
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let selectedIndex = self.segmentControl.selectedSegmentIndex
            switch selectedIndex
@@ -96,6 +96,8 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
            case 0:
                return 120
            case 1:
+               return 0
+           case 2:
                return 0
            //Add other cases here
            default:
@@ -108,9 +110,11 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
            switch selectedIndex
            {
            case 0:
-               return 5
+               return (firstItems?.items.count)!
            case 1:
-               return 10
+               return (secondItems?.secondItem.count)!
+           case 2:
+               return 5
            default:
                return 0
            }
@@ -122,10 +126,33 @@ extension DetailView:UITableViewDelegate,UITableViewDataSource {
            switch selectedIndex
            {
            case 0:
-               return tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)  as! FirstCell //Do your custom handling whatever required.
+            
+              let cell =  tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath)  as! FirstCell
+               
+               let index = firstItems?.items[indexPath.row]
+                
+               cell.configure(with:index!)
+               
+               return cell
+               
            case 1:
-               return tableView.dequeueReusableCell(withIdentifier: "secondCell", for: indexPath) as! SecondCell
-           //Add other cases here
+               
+               let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell", for: indexPath) as! SecondCell
+               
+                let second = secondItems?.secondItem[indexPath.row]
+               
+                cell.configurewith(with:second!)
+                
+                
+                return cell
+           case 2:
+               
+               let cell = tableView.dequeueReusableCell(withIdentifier: "thirdCell", for: indexPath) as! thirdCell
+               
+               
+    
+                return cell
+               
            default:
                return UITableViewCell()
            }

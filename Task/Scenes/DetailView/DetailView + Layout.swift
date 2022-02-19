@@ -44,7 +44,7 @@ extension DetailView {
     
     private func tableViewConstraints() {
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(segmentControl.snp.bottom).offset(20)
+            make.top.equalTo(segmentControl.snp.bottom).offset(10)
             make.bottom.left.right.equalToSuperview()
         }
     }
